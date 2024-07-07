@@ -11,8 +11,8 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "YOOM",
-  description: "Video calling App",
+  title: "Smart Study",
+  description: "Study Assistance App",
   icons: {
     icon: "/icons/logo.svg",
   },
@@ -37,7 +37,9 @@ export default function RootLayout({
             colorInputText: "#fff",
           },
         }}
+        
       >
+        <title>Smart Study</title>
         <body className={`${inter.className} bg-dark-2`}>
           <Toaster />
           {children}

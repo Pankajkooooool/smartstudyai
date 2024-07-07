@@ -4,7 +4,11 @@ export const sidebarLinks = [
     route: '/',
     label: 'Home',
   },
-
+  {
+    imgURL: '/icons/logo.svg',
+    route: '/noteai',
+    label: 'Note AI',
+  },
   {
     imgURL: '/icons/upcoming.svg',
     route: '/upcoming',
