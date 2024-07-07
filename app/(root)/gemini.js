@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const generativeAI = new GoogleGenerativeAI({
-  apiKey: 'AIzaSyCLzEs_M9MtMWzvHYtwq2Rpg0I2YA5Q3FY', // Replace with your actual API key
+  apiKey: '', // Replace with your actual API key
 });
 
 export default async function handler(req, res) {

@@ -12,7 +12,7 @@ interface NotesAndQAState {
   error: string | null;
 }
 
-const genAI = new GoogleGenerativeAI('AIzaSyCLzEs_M9MtMWzvHYtwq2Rpg0I2YA5Q3FY');
+const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMENI_KEY);
 
 async function runChat(notes: String,question: String) {
   // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
