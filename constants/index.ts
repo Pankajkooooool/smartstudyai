@@ -9,21 +9,21 @@ export const sidebarLinks = [
     route: '/noteai',
     label: 'Note AI',
   },
-  {
-    imgURL: '/icons/upcoming.svg',
-    route: '/upcoming',
-    label: 'Upcoming',
-  },
-  {
-    imgURL: '/icons/previous.svg',
-    route: '/previous',
-    label: 'Previous',
-  },
-  {
-    imgURL: '/icons/Video.svg',
-    route: '/recordings',
-    label: 'Recordings',
-  },
+  // {
+  //   imgURL: '/icons/upcoming.svg',
+  //   route: '/upcoming',
+  //   label: 'Upcoming',
+  // },
+  // {
+  //   imgURL: '/icons/previous.svg',
+  //   route: '/previous',
+  //   label: 'Previous',
+  // },
+  // {
+  //   imgURL: '/icons/Video.svg',
+  //   route: '/recordings',
+  //   label: 'Recordings',
+  // },
   {
     imgURL: '/icons/add-personal.svg',
     route: '/personal-room',

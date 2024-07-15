@@ -93,10 +93,10 @@ const MeetingTypeList = () => {
       />
       <HomeCard
         img="/icons/recordings.svg"
-        title="View Recordings"
+        title="Analyze notes"
         description="Meeting Recordings"
         className="bg-yellow-1"
-        handleClick={() => router.push('/recordings')}
+        handleClick={() => router.push('/noteai')}
       />
 
       {!callDetail ? (

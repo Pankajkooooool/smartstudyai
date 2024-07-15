@@ -21,7 +21,7 @@ const UploadImage = () => {
     // Check the file type
     const validFileTypes = ['image/jpeg', 'image/png', 'image/webp', 'application/pdf'];
     if (!validFileTypes.includes(selectedFile.type)) {
-      setExtractedText(`Invalid file type ${selectedFile.type}. Please upload an image or PDF file.`);
+      setExtractedText(`Invalid file type ${selectedFile.type}. Please upload an image file.`);
       return;
     }
     const formData = new FormData();
