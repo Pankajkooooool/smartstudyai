@@ -1,6 +1,7 @@
 "use client"
 import React, { useState,useEffect } from 'react';
 import NotesAndQA from './NotesAndQA';
+
 const UploadImage = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   
@@ -33,7 +34,8 @@ const UploadImage = () => {
       });
 
       if (!response.ok) {
-        setMessage(`Error: ${response.statusText}`);
+        // setMessage(`Error: ${response.statusText}`);
+        // console.log(response.statusText)
         return;
       }
 

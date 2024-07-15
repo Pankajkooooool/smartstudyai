@@ -3,16 +3,16 @@ import React, { useState, useEffect, FC } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai'; // Optional import if not using API route
 
 
-interface NotesAndQAState {
-  notes: string;
-  question: string;
-  answer: string;
-  summary: string;
-  isLoading: boolean;
-  error: string | null;
-}
-
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMENI_KEY);
+// interface NotesAndQAState {
+//   notes: string;
+//   question: string;
+//   answer: string;
+//   summary: string;
+//   isLoading: boolean;
+//   error: string | null;
+// }
+const myVar: string = process.env.NEXT_PUBLIC_GEMENI_KEY as string;
+const genAI = new GoogleGenerativeAI(myVar);
 
 async function runChat(notes: String,question: String) {
   // The Gemini 1.5 models are versatile and work with both text-only and multimodal prompts
@@ -39,7 +39,7 @@ const NotesAndQA: FC<NotesAndQAProps> = (props) => {
   );
   const [question, setQuestion] = useState('what is para');
   const [answer, setAnswer] = useState('');
-  const [summary, setSummary] = useState('');
+  // const [summary, setSummary] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
@@ -64,7 +64,7 @@ const NotesAndQA: FC<NotesAndQAProps> = (props) => {
   useEffect(() => {
     setQuestion(''); // Clear question field after results are displayed
     setNotes(props.extractedText)
-  }, [answer, summary, error,props.extractedText]);
+  }, [answer, error,props.extractedText]);
 
   return (
     <>
@@ -84,7 +84,7 @@ const NotesAndQA: FC<NotesAndQAProps> = (props) => {
         </form>
         {error && <p className="text-white">{error}</p>}
         {answer && <p className='text-white'>Answer: {answer}</p>}
-        {summary && <p className='text-white'>Summary: {summary}</p>}
+        {/* {summary && <p className='text-white'>Summary: {summary}</p>} */}
       </div>
     </>
   );
